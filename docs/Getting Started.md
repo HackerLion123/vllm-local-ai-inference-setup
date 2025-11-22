@@ -8,13 +8,26 @@ Fastest inference framework to deploy production level llm for inference for hig
 ## Inference Optimizations in vLLM
 
 1. Prefix Caching
+    - 
 2. Speculative Decoding
+    - 
 3. Chunked Prefills
+    - 
 4. Disaggregated Serving
+    - 
 5. Streaming Prefills
+    - 
 6. Jump-forward Decording
-7. Quantization
+    - 
+7. Quantization 
+    - Reducing the precision of the model weights that we store. 
+    - FP8, INT8, GPTQ, AWQ
+    -  
 8. Cascade Attention
+    - 
 9. Structured Outputs
+    - 
 10. Cpu KV cache Offloading
+    - 
 11. Muti-LoRA serving
+    - 
