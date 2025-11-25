@@ -3,7 +3,7 @@
 
 ## What is vLLM
 
-Fastest inference framework to deploy production level llm for inference for high speed inference. It is the fastest llm inference tool for local or self deployed llms. vLLM has exceled in combining all different optimizitations proposed in papers and have unified them to work together. This is done while retaining perfomance of the model.
+Fastest inference framework to deploy production level llm for high speed inference. It is the fastest llm inference tool for local or self deployed llms. vLLM has exceled in combining all different optimizitations proposed in papers and have unified them to work together. This is done while retaining perfomance of the model.
 
 ### 1. Prefix Caching
 Caches attention key/value (KV) pairs for shared prompt prefixes so they aren’t recomputed.
@@ -233,7 +233,13 @@ Serves many LoRA adapters on a single base model without duplicating the base we
 
 ## Installing vLLM
 
+```
 pip install vllm
+```
+
+
+
+## Simple Getting Started
 
 ```
 from vllm import LLM, SamplingParams
@@ -251,9 +257,21 @@ print("Generated:", outputs[0].outputs[0].text)
 
 Start the server.
 
+```
 vllm serve meta-llama/Meta-Llama-3-8B-Instruct --port 8000
+```
 
+To have open-webui with vllm models
 
-## Simple Getting Started
+```
+docker run -d \
+    --name open-webui \
+    -p 3000:8080 \
+    -v open-webui:/app/backend/data \
+    -e OPENAI_API_BASE_URL=http://0.0.0.0:8000/v1 \
+    --restart always \
+    ghcr.io/open-webui/open-webui:main
+```
+
 
 
