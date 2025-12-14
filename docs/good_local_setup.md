@@ -108,7 +108,7 @@ General role of thumb is quantized version of larger parameter models will give 
 We’ll assume:
 
 - Linux
-- Python 3.9–3.12 
+- Python 3.9–3.12+
 
 ### 3.1 Create a Virtual Environment
 
